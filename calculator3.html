@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+body{margin:0;
+padding:0;
+background:url('download/matrix-2502957_1920.jpg');
+background-repeat:no-repeat;
+background-size:cover}
+
+.div{width:50%;
+margin:auto;
+margin-top:20px;
+background:rgba(0,0,0,0.5);
+box-shadow: 2px 2px blue, 3px 3px red, 3px 3px green;}
+
+input[type="number"]{width:100%;
+height:30px;
+font-weight:bold;
+font-size:20px;
+border-radius:4px;
+}
+
+input[class="firstsm"]{border-bottom:4px solid #FFFF00;
+border-top:2px solid #4169E1;
+border-left:2px solid #663399;
+border-right:2px solid red}
+input[class="secondsm"]{border-top:4px solid #FA8072;
+border-bottom:2px solid #4169E1;
+border-left:2px solid #663399;
+border-right:2px solid green}
+table{margin-left:25px}
+
+input[type="button"]{width:60px;
+height:40px;
+border:none;
+box-shadow:2px 2px #9ACD32;
+font-weight:bold;
+font-size:25px;
+border-radius:3px;
+background:#8A2BE2;
+color:#fff;
+}
+input[type="button"]:hover{background:#FF1493;
+color:#0000CD;
+text-shadow:1px 1px #fff;
+border:none}
+input[type="text"]{padding:17px 0px 17px 0px;
+border-radius:4px;
+border:none;
+font-weight:bold;
+font-size:30px;
+text-align:center;
+color:#000;
+width:100%;
+box-shadow:0 2px 5px 2px rgba(0,0,0,.6) inset
+
+}
+::-webkit-input-placeholder{font-size:15px}
+</style>
+</head>
+
+<body>
+<div class="div">
+ <form name="myform">
+    <input class="firstsm" type="number" name="First" placeholder="First Sum"><br>
+    <input class="secondsm" type="number" name="Second" placeholder="Second Sum"><br>
+   <table>
+     <tr>
+     <td><input type="button" name="" value="+" onclick="add()"></td>
+     <td> <input type="button" name="" value="-" onclick="Minus()"></td>
+     </tr>
+     <tr>
+     <td><input type="button" name="" value="×" onclick="multiply()"></td>
+     <td><input type="button" name="" value="÷" onclick="divide()"></td>
+     </tr>
+   </table>
+    <input type="text" name="result" placeholder="Result" disabled >
+      
+ </form>
+</div>
+    <script type="text/javascript">
+       function add(){
+       First=parseInt(myform.First.value);
+       Second=parseInt(myform.Second.value);
+       result=First+Second;
+       myform.result.value=result;
+       }
+       function Minus(){
+       First=parseInt(myform.First.value);
+       Second=parseInt(myform.Second.value);
+       result=First-Second;
+       myform.result.value=result;
+       }
+       function multiply(){
+       First=parseInt(myform.First.value);
+       Second=parseInt(myform.Second.value);
+       result=First*Second;
+       myform.result.value=result;
+       }
+       function divide(){
+       First=parseInt(myform.First.value);
+       Second=parseInt(myform.Second.value);
+       result=First/Second;
+       myform.result.value=result;
+       }
+    </script>
+</body>
+</html>
+
